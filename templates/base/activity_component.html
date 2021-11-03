@@ -1,0 +1,31 @@
+
+<div class="activities">
+          <div class="activities__header">
+            <h2>Recent Activities</h2>
+          </div>
+          
+          {% for msg in room_msgs %}
+          <div class="activities__box">
+            <div class="activities__boxHeader roomListRoom__header">
+              <a href="{% url 'profile' msg.user.id %}" class="roomListRoom__author">
+                <div class="avatar avatar--small active">
+                  <img src="{{msg.user.image.url}}" />
+                </div>
+                <p>
+                  @{{msg.user}}
+                  <span>{{msg.created|timesince}} ago</span>
+                </p>
+              </a>
+
+            </div>
+            <div class="activities__boxContent">
+              <p>replied to post :<a href="{% url 'room' msg.room.id %}">{{msg.room}}</a></p>
+              <div class="activities__boxRoomContent">
+                {{msg.body}}....
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+</div>
+
+
