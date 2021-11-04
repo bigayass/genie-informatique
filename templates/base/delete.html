@@ -16,14 +16,14 @@
                                 </path>
                             </svg>
                         </a>
-                        <h3>Back</h3>
+                        <h3>Retour</h3>
                     </div>
                 </div>
                 <div class="layout__body">
                     <form class="form" method="POST" action="">
                         {% csrf_token %}
                         <div class="form__group">
-                            <p>Are you sure you want to delete "{{obj}}" ?</p>
+                            <h4>Etes-vous sûr que vous voulez supprimer "{{obj}}" ?</h4>
                         </div>
 
                         <div class="for__group">
