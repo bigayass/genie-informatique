@@ -1,7 +1,7 @@
 
 <div class="activities">
           <div class="activities__header">
-            <h2>Recent Activities</h2>
+            <h2>Activités récentes</h2>
           </div>
           
           {% for msg in room_msgs %}
@@ -13,13 +13,13 @@
                 </div>
                 <p>
                   @{{msg.user}}
-                  <span>{{msg.created|timesince}} ago</span>
+                  <span>Il y a {{msg.created|timesince}}</span>
                 </p>
               </a>
 
             </div>
             <div class="activities__boxContent">
-              <p>replied to post :<a href="{% url 'room' msg.room.id %}">{{msg.room}}</a></p>
+              <p>a répondu au Cvrs :<a href="{% url 'room' msg.room.id %}">{{msg.room}}</a></p>
               <div class="activities__boxRoomContent">
                 {{msg.body}}....
               </div>

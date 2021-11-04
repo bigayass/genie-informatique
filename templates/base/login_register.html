@@ -8,20 +8,20 @@
         <div class="layout__box">
           <div class="layout__boxHeader">
             <div class="layout__boxTitle">
-              <h3>Login</h3>
+              <h3>Connexion</h3>
             </div>
           </div>
           <div class="layout__body">
-            <h2 class="auth__tagline">Find your study partner</h2>
+            <h2 class="auth__tagline">Trouvez votre partenaire d'étude</h2>
 
             <form class="form" method="POST" action="">
               {% csrf_token %}
               <div class="form__group form__group">
                 <label for="room_name">Email</label>
-                <input id="username" name="email" type="text" placeholder="e.g. username" />
+                <input id="username" name="email" type="text" placeholder="utilisateur@x.com" />
               </div>
               <div class="form__group">
-                <label for="password">Password</label>
+                <label for="password">Mots de Passe</label>
                 <input
                   id="password"
                   name="password"
@@ -47,13 +47,13 @@
                   ></path>
                 </svg>
 
-                Login
+                Connexion
               </button>
             </form>
 
             <div class="auth__action">
-              <p>Haven't signed up yet?</p>
-              <a href="{% url 'register' %}" class="btn btn--link">Sign Up</a>
+              <p>Vous n'êtes pas encore inscrit ?</p>
+              <a href="{% url 'register' %}" class="btn btn--link">S'inscrire</a>
             </div>
           </div>
         </div>
@@ -63,21 +63,41 @@
         <div class="layout__box">
           <div class="layout__boxHeader">
             <div class="layout__boxTitle">
-              <h3>Register</h3>
+              <h3>S'inscrire</h3>
             </div>
           </div>
           <div class="layout__body">
-            <h2 class="auth__tagline">Find your study partner</h2>
+            <h2 class="auth__tagline">Trouvez votre partenaire d'étude</h2>
 
             <form class="form" method="POST" action="">
               {% csrf_token %}
 
-              {% for field in form %}
+              
               <div class="form__group form__group">
-                <label for="room_name">{{field.label}}</label>
-                {{field}}
+                <label for="room_name">Email</label>
+                {{form.email}}
               </div>
-              {% endfor %}
+
+              <div class="form__group form__group">
+                <label for="room_name">Nom d'Utilisateur</label>
+                {{form.username}}
+              </div>
+
+              <div class="form__group form__group">
+                <label for="room_name">Nom et Prénom</label>
+                {{form.name}}
+              </div>
+
+              <div class="form__group form__group">
+                <label for="room_name">Mots de Passe</label>
+                {{form.password1}}
+              </div>
+
+              <div class="form__group form__group">
+                <label for="room_name">Comfirmation du Mots de Passe</label>
+                {{form.password2}}
+              </div>
+              
 
               {{form.errors}}
               
@@ -99,13 +119,13 @@
                   ></path>
                 </svg>
 
-                Sign Up
+                S'inscrire
               </button>
             </form>
 
             <div class="auth__action">
-              <p>You have already an Account ?</p>
-              <a href="{% url 'login' %}" class="btn btn--link">Log in</a>
+              <p>Vous avez déjà un compte ?</p>
+              <a href="{% url 'login' %}" class="btn btn--link">Connexion</a>
             </div>
           </div>
         </div>

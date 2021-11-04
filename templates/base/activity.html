@@ -15,7 +15,7 @@
                   ></path>
                 </svg>
               </a>
-              <h3>Recent Activities</h3>
+              <h3>Activités récentes</h3>
             </div>
           </div>
 
@@ -29,13 +29,13 @@
                   </div>
                   <p>
                     @{{msg.user.username}}
-                    <span>{{msg.created|timesince}} ago</span>
+                    <span>Il y a {{msg.created|timesince}}</span>
                   </p>
                 </a>
                 
               </div>
               <div class="activities__boxContent">
-                <p>replied to post :<a href="room.html">{{msg.room.name}}</a></p>
+                <p>a répondu au Cvrs :<a href="room.html">{{msg.room.name}}</a></p>
                 <div class="activities__boxRoomContent">
                   {{msg.body}}....
                 </div>

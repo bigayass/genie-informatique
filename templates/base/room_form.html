@@ -15,7 +15,7 @@
                 </path>
               </svg>
             </a>
-            <h3>Create / Update Study Room</h3>
+            <h3>Créer / Mettre à jour un salon d'étude</h3>
           </div>
         </div>
         <div class="layout__body">
@@ -36,19 +36,28 @@
               
             </div> -->
 
-            {% for field in form %}
+            
             <div class="form__group">
-              <label for="room_name">{{ field.label }}</label>
-              {{ field }}
+              <label for="room_name">Sujet</label>
+              {{ form.topic }}
             </div>
-            {% endfor %}
+            
+            <div class="form__group">
+              <label for="room_name">Titre</label>
+              {{ form.name }}
+            </div>
+
+            <div class="form__group">
+              <label for="room_name">Description</label>
+              {{ form.description }}
+            </div>
             
 
             
 
             <div class="form__action">
-              <a class="btn btn--dark" href="{% url 'home' %}">Cancel</a>
-              <button class="btn btn--main" type="submit">Submit Room</button>
+              <a class="btn btn--dark" href="{% url 'home' %}">Annuler</a>
+              <button class="btn btn--main" type="submit">Enregistrer</button>
             </div>
           </form>
         </div>

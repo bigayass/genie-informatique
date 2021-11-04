@@ -16,25 +16,45 @@
                                 </path>
                             </svg>
                         </a>
-                        <h3>Edit your profile</h3>
+                        <h3>Modifier votre profil</h3>
                     </div>
                 </div>
                 <div class="layout__body">
                     <form class="form" method="POST" action="" enctype="multipart/form-data">
                       {% csrf_token %}
 
-                      {% for field in form %}
+                      
                         <div class="form__group">
-                            <label for="profile_pic">{{ field.label }}</label>
-                            {{ field }}
+                            <label for="profile_pic">Email</label>
+                            {{ form.email }}
                         </div>
-                      {% endfor %}
+
+                        <div class="form__group">
+                            <label for="profile_pic">Nom d'Utilisateur</label>
+                            {{ form.username }}
+                        </div>
+
+                        <div class="form__group">
+                            <label for="profile_pic">Nom et Prénom</label>
+                            {{ form.name }}
+                        </div>
+
+                        <div class="form__group">
+                            <label for="profile_pic">Photo de Profil</label>
+                            {{ form.image }}
+                        </div>
+
+                        <div class="form__group">
+                            <label for="profile_pic">À propos</label>
+                            {{ form.bio }}
+                        </div>
+                      
 
                       {{form.errors}}
 
                         <div class="form__action">
-                            <a class="btn btn--dark" href="{% url 'home' %}">Cancel</a>
-                            <button class="btn btn--main" type="submit">Update</button>
+                            <a class="btn btn--dark" href="{% url 'home' %}">Annuler</a>
+                            <button class="btn btn--main" type="submit">Modifier</button>
                         </div>
                     </form>
                 </div>
