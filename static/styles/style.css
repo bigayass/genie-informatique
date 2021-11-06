@@ -1,18 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
+  --color-main: #E7BF9C;
+  --color-main-light: #e1f6fb;
+  --color-dark: #7e3300;
+  --color-dark-medium: #6F450B; /*search bar*/
+  --color-dark-light: #9F580B; /*recent activitys*/
+  --color-light: #e5e5e5; /*study bud*/
+  --color-gray: #e5e5e5;
+  --color-light-gray: #eeeff0; /* text */
+  --color-bg: #170b01;
+  --color-success: #5dd693;
+  --color-error: #fc4b0b;
+}
+/*:root {
   --color-main: #76D962;
   --color-main-light: #e1f6fb;
   --color-dark: #044d29;
-  --color-dark-medium: #066B39; /*search bar*/
-  --color-dark-light: #3D9C2A; /*recent activitys*/
-  --color-light: #e5e5e5; /*study bud*/
+  --color-dark-medium: #066B39; 
+  --color-dark-light: #3D9C2A; recent activitys
+  --color-light: #e5e5e5; 
   --color-gray: #8b8b8b;
   --color-light-gray: #eeeff0;
   --color-bg: #00261c;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
-}
+}*/
 /*:root {
   --color-main: #71c6dd;
   --color-main-light: #e1f6fb;
