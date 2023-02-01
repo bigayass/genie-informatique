@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Room, Topic, Message, User
 from .forms import RoomForm, UserForm, MyUserCreationFomr
 from django.db.models import Q
-#from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -119,20 +118,9 @@ def createRoom(request):
     topics = Topic.objects.all()
 
     if request.method == 'POST':
-        # topic_name = request.POST.get('topic')
-        # topic, created = Topic.objects.get_or_create(name=topic_name)
-        
-        # room = Room.objects.create(
-        #     host=request.user,
-        #     topic=topic,
-        #     name=request.POST.get('name'),
-        #     description=request.POST.get('description')
-        # )
-        # room.participants.add(request.user)
-
-        # return redirect('home')
 
         form = RoomForm(request.POST)
+
         if form.is_valid():
             room = form.save(commit=False)
             room.host = request.user
@@ -157,16 +145,9 @@ def updateRoom(request, pk):
         return HttpResponse('Not Allowed !')
 
     if request.method == 'POST':
-        # topic_name = request.POST.get('topic')
-        # topic, created = Topic.objects.get_or_create(name=topic_name)
-
-        # room.name = request.POST.get('name')
-        # room.topic = topic
-        # room.description = request.POST.get('description')
-
-        # return redirect('home')
-
+        
         form = RoomForm(request.POST, instance=room)
+
         if form.is_valid():
             form.save()
             return redirect('home')

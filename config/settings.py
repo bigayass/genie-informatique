@@ -26,7 +26,7 @@ SECRET_KEY = 'yHC{1<srJBH~OF!Op,Q>h6=='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['genie-informatique.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'fr'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
@@ -125,8 +125,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
@@ -149,11 +147,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # AWS S3 bucket configuration : (need to install django-storages and boto3)
 
-AWS_QUERYSTRING_AUTH = False
-AWS_ACCESS_KEY_ID = 'AKIA4E4WMJX223ZOY3II'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'est-fbs-blogs-bucket'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_QUERYSTRING_AUTH = False
+# AWS_ACCESS_KEY_ID = 'put ur AWS_ACCESS_KEY_ID here'
+# AWS_SECRET_ACCESS_KEY = 'put ur AWS_SECRET_ACCESS_KEY here'
+# AWS_STORAGE_BUCKET_NAME = 'AWS_STORAGE_BUCKET_NAME here'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
